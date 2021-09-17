@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color-Flipper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter&family=Oxygen:wght@300&
+family=Quicksand:wght@500&family=Signika+Negative:wght@300&family=Zilla+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .title {
+        font-weight: bolder;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-size: 2.4rem;
+        font-family: "Bitter";
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+        /* border: 1px solid black; */
+        margin: 0px 0px;
+        box-shadow: 12px 2px 13px #aaa;
+      }
+
+      .social-icons {
+        height: 30vh;
+        display: grid;
+        grid-template-columns: repeat(4, 80px);
+        grid-gap: 1px;
+        /* transform: translateX(189px); */
+        /* border: 2px solid black; */
+        width: 19rem;
+        margin: -51px auto;
+      }
+
+      .icons {
+        transform: scale(2);
+        width: 20px;
+        margin: 12px auto;
+        border-radius: 3px;
+        transition: all 0.23s ease-in-out;
+      }
+
+      .icons:hover {
+        /* border: 2px solid black; */
+        transform: scale(2.3);
+      }
+
+      .main-section {
+        display: grid;
+        place-items: center;
+        align-items: center;
+        min-height: 60vh;
+        transform: translateY(-12px);
+      }
+
+      .change-color {
+        transform: translateY(93px);
+        background-color: transparent;
+        border: 2px outset black;
+        border-radius: 12px;
+        padding: 12px 34px;
+
+        transition: transform 0.3s linear;
+        transform: translateY(34px);
+        position: relative;
+        cursor: pointer;
+        transition: all 0.11s;
+      }
+
+      .change-color:hover {
+        border: 3px inset rgba(19, 17, 19, 0.568);
+      }
+
+      #color {
+        transform: translateY(103px);
+        border: 2px solid black;
+        background-color: black;
+        color: white;
+        padding: 23px 12px;
+        font-family: "Oxygen";
+        width: 18rem;
+        border-radius: 12px;
+      }
+
+      #colorname {
+        color: #f75c14f3;
+        font-weight: bolder;
+      }
+
+      .text {
+        font-weight: bolder;
+        display: inline-block;
+        height: auto;
+        box-shadow: none;
+        color: black;
+        width: 244px;
+        background-color: transparent;
+        font-size: 1rem;
+        transform: translate(12px, -21px);
+        margin: -134px 0px;
+      }
+
+      .random {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: black;
+        font-family: "bitter";
+        font-weight: bolder;
+        transform: translateY(113px);
+      }
+
+      /*Media Queries */
+      @media only screen and (max-width: 869px) {
+        .title {
+          font-size: 1.3rem;
+          display: flex;
+          justify-content: center;
+        }
+        .random {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          color: black;
+          font-family: "bitter";
+          font-weight: bolder;
+          transform: translate(19px, 113px);
+        }
+      }
+
+      /* for Galaxy Fold */
+      @media only screen and (max-width: 280px) {
+        .icons {
+          border: 2px solid rgb(241, 241, 241);
+          filter: invert(100%);
+          transform: scale(2.3);
+          width: 10px;
+          margin: 22px 4px;
+        }
+
+        #color {
+          transform: translateY(103px);
+          border: 2px solid black;
+          background-color: black;
+          color: white;
+          padding: 23px 12px;
+          font-family: "Oxygen";
+          width: 15rem;
+          border-radius: 12px;
+          margin: 0px 0px;
+        }
+      }
+
+      /* Media queries end  */
+    </style>
+  </head>
+
+  <body>
+    <main class="title">Color-Flipper</main>
+    <p class="random">Click the button to generate random hexadecimal value</p>
+    <section class="main-section">
+      <p id="color">Color-Code: <span id="colorname">#fff</span></p>
+      <button class="change-color">Click Me</button>
+      <p class="title text">Click the icon to get Color code</p>
+    </section>
+    <div class="social-icons">
+      <img class="icons" id="facebook" src="../1 project/facebook.png" alt="" />
+
+      <img class="icons" id="twitter" src="../1 project/twitter.png" alt="" />
+
+      <img
+        class="icons"
+        id="instagram"
+        src="../1 project/instagram.png"
+        alt=""
+      />
+
+      <img class="icons" id="linkiein" src="../1 project/linkiein.png" alt="" />
+
+      <img class="icons" id="youtube" src="../1 project/youtube.png" alt="" />
+
+      <img class="icons" id="telegram" src="../1 project/telegram.png" alt="" />
+
+      <img class="icons" id="whatsapp" src="../1 project/whatsapp.png" alt="" />
+
+      <img class="icons" id="tumblr" src="../1 project/tumblr.png" alt="" />
+
+      <img class="icons" id="snapchat" src="../1 project/snapchat.png" alt="" />
+
+      <img class="icons" id="behance" src="../1 project/behance.png" alt="" />
+
+      <img class="icons" id="skype" src="../1 project/skype.png" alt="" />
+
+      <img class="icons" id="gmail" src="../1 project/gmail.png" alt="" />
+    </div>
+    <script src="../1 project/app.js"></script>
+  </body>
+</html>
