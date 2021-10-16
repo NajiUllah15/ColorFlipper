@@ -5,15 +5,16 @@ let colors = [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "D", "C", "E", "F"];
 const colorname = document.getElementById("colorname");
 const btn = document.querySelector(".change-color");
 // let displaycolor = document.querySelector')
-btn.addEventListener("click", function () {
-  let color = "#";
+ window.addEventListener('keydown', (event) => {
+  if (event.code === 'Space') {
+      let color = "#";
   for (let i = 0; i < 6; i++) {
     color += colors[random()];
   }
   document.body.style.backgroundColor = color;
   colorname.innerHTML = color;
+  }
 });
-
 function random() {
   return Math.floor(Math.random() * colors.length);
 }
