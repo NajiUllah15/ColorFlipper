@@ -4,8 +4,10 @@
 let colors = [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "D", "C", "E", "F"];
 const colorname = document.getElementById("colorname");
 const btn = document.querySelector(".change-color");
+const body = document.querySelector("body");
+
 // let displaycolor = document.querySelector')
- window.addEventListener('keydown', (event) => {
+   body.addEventListener('keydown', (event) => {
   if (event.code === 'Space') {
       let color = "#";
   for (let i = 0; i < 6; i++) {
